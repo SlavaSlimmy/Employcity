@@ -28,14 +28,14 @@
           class="menu-toggle"
           aria-controls="main-navigation"
           aria-expanded="false"
-          aria-label="Открыть меню"
+          aria-label="Открыть главное меню"
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        <nav id="main-navigation" class="nav" aria-label="Main menu">
+        <nav id="main-navigation" class="nav" aria-label="Главное меню">
           <ul class="nav__list">
             <li class="nav__item"><a href="#" class="nav__link nav__link--active">Бизнес</a></li>
             <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
@@ -186,15 +186,20 @@
                 </div>
               </div>
               <div class="form__item">
-                <button type="button" class="btn btn--md btn--full-width btn--secondary" id="upload-btn">
+                <button
+                  type="button"
+                  class="btn btn--md btn--full-width btn--secondary"
+                  id="upload-btn"
+                  aria-label="Прикрепить файл"
+                >
                   <span class="btn__inner">
-                    <svg class="btn__icon">
+                    <svg class="btn__icon" aria-hidden="true">
                       <use xlink:href="/images/icons.svg#attach"></use>
                     </svg>
                     Прикрепить файл
                   </span>
                 </button>
-                <input type="file" id="file-input" name="file" hidden />
+                <input type="file" id="file-input" name="file" hidden aria-label="Выберите файл для загрузки" />
               </div>
             </div>
             <div class="form__button">
@@ -242,7 +247,7 @@
           </li>
         </ul>
         <div class="footer__divider"></div>
-        <ul class="footer__block footer__block--contacts contacts">
+        <ul class="footer__block footer__block--contacts">
           <li>
             <a href="mailto:info@ipsum228.com" class="contact">
               <span class="contact__icon">

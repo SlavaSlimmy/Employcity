@@ -59,7 +59,8 @@
       color: var(--primary-color);
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: var(--primary-color);
     }
   }

@@ -36,8 +36,10 @@ export class MobileMenu {
     this.sidebar.classList.toggle('nav--open');
 
     if (this.isMenuOpen) {
+      this.button.setAttribute('aria-expanded', 'true');
       this.lockBody();
     } else {
+      this.button.setAttribute('aria-expanded', 'false');
       this.unlockBody();
     }
   }
