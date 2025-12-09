@@ -1,0 +1,31 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.form {
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: repeat(3, minmax(0, 370px));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {
+    &--col2 {
+      @media (min-width: $breakpoint-lg) {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  &__button {
+    max-width: 370px;
+    margin: 0 auto;
+  }
+}

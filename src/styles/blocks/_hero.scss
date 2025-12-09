@@ -2,14 +2,80 @@
 @use '../base/mixins' as *;
 
 .hero {
-  background-position: 50% 50%;
+  background-position: 58% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  color: var(--black);
+
+  @media (min-width: $breakpoint-lg) {
+    background-position: 50% 50%;
+  }
 
   &__container {
     max-width: var(--max-container);
     margin: 0 auto;
-    min-height: 850px;
-    padding: 0px 16px;
+    padding: 100px 16px;
+
+    @media (min-width: $breakpoint-lg) {
+      padding: 203px 16px;
+    }
+  }
+
+  &__title {
+    font-size: rem(20);
+    line-height: rem(24);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0px 0px 20px;
+    padding: 0;
+
+    @media (min-width: $breakpoint-lg) {
+      margin: 0px 0px 80px;
+      font-size: rem(48);
+      line-height: rem(62.5);
+    }
+  }
+
+  &__title-blue {
+    color: var(--primary-color);
+  }
+
+  &__desc {
+    font-size: rem(16);
+    line-height: rem(20);
+    font-weight: 700;
+    margin-bottom: 10px;
+
+    @media (min-width: $breakpoint-lg) {
+      font-size: rem(20);
+      line-height: rem(24);
+    }
+  }
+
+  &__info {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: rem(16);
+    line-height: rem(20);
+    margin-bottom: 20px;
+
+    @media (min-width: $breakpoint-lg) {
+      font-size: rem(20);
+      line-height: rem(24);
+      margin-bottom: 80px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 183px;
   }
 }

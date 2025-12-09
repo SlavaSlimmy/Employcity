@@ -1,0 +1,65 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.order {
+  background: url('/images/order-bg.webp') 50% 50% no-repeat;
+  background-size: cover;
+
+  &__container {
+    max-width: var(--max-container);
+    margin: 0 auto;
+    padding: 20px 16px;
+
+    @media (min-width: $breakpoint-lg) {
+      padding: 121px 16px 151px;
+    }
+  }
+
+  &__title {
+    font-size: rem(20);
+    line-height: rem(24);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media (min-width: $breakpoint-lg) {
+      font-size: rem(36);
+      line-height: rem(40);
+    }
+  }
+
+  &__title-blue {
+    color: var(--primary-color);
+  }
+
+  &__desc {
+    font-size: rem(16);
+    line-height: rem(20);
+    text-align: center;
+    color: var(--gray-5);
+    margin-bottom: 40px;
+
+    @media (min-width: $breakpoint-lg) {
+      font-size: rem(18);
+      line-height: rem(24);
+      margin-bottom: 80px;
+    }
+  }
+
+  &__steps {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow-x: auto;
+    position: relative;
+    @include custom-scroll;
+
+    margin-bottom: 40px;
+
+    @media (min-width: $breakpoint-lg) {
+      margin-bottom: 80px;
+    }
+  }
+}

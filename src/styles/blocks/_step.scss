@@ -1,0 +1,53 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 209px;
+  min-width: 209px;
+  align-items: center;
+  padding: 0px 10px;
+  position: relative;
+
+  &:not(:last-child) {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateY(-50%);
+      width: calc(100% + 20px);
+      height: 6px;
+      background-image: radial-gradient(circle, var(--gray-6) 3px, transparent 3px);
+      background-size: 26px 6px;
+      background-repeat: repeat-x;
+      z-index: 1;
+    }
+  }
+
+  &__circle {
+    width: 100px;
+    height: 100px;
+    background: var(--blue);
+    border: 5px solid var(--blue-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  &__desc {
+    font-size: rem(16);
+    line-height: rem(22);
+    text-align: center;
+  }
+}

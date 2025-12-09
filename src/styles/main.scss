@@ -2,7 +2,14 @@
 @use './blocks/header';
 @use './blocks/menu-toggle';
 @use './blocks/nav';
+@use './blocks/btn';
 @use './blocks/hero';
+@use './blocks/order';
+@use './blocks/step';
+@use './blocks/form';
+@use './blocks/form-control';
+@use './blocks/custom-select';
+@use './blocks/progress-control';
 @use './blocks/payment-view';
 @use './blocks/contact';
 @use './blocks/footer';

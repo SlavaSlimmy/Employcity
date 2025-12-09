@@ -45,8 +45,160 @@
     </header>
 
     <main class="main">
-      <section class="hero" style="background-image: url('/images/hero.png')">
-        <div class="hero__container">hero</div>
+      <section class="hero" style="background-image: url('/images/hero.webp')">
+        <div class="hero__container">
+          <h1 class="hero__title">
+            <span class="hero__title-blue">Lorem ipsum</span> dolor sit<br />
+            amet consectetur <span class="hero__title-blue">adipiscing</span>
+          </h1>
+          <p class="hero__desc">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+          <ul class="hero__info">
+            <li>- Totam rem aperiam eaque ipsa</li>
+            <li>- Sit voluptatem accusantium doloremque laudantium</li>
+            <li>- Sed ut perspiciatis, unde omnis iste natus error</li>
+          </ul>
+          <div class="hero__buttons">
+            <button type="button" class="btn hero__btn">Заказать</button>
+            <button type="button" class="btn btn--secondary hero__btn">Подробнее</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="order">
+        <div class="order__container">
+          <h2 class="order__title">Оформление <span class="order__title-blue">Заказа</span></h2>
+          <p class="order__desc">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+
+          <div class="order__steps">
+            <div class="step">
+              <div class="step__circle">
+                <svg class="step__icon">
+                  <use xlink:href="/images/icons.svg#search"></use>
+                </svg>
+              </div>
+              <p class="step__desc">Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="step">
+              <div class="step__circle">
+                <svg class="step__icon">
+                  <use xlink:href="/images/icons.svg#percent"></use>
+                </svg>
+              </div>
+              <p class="step__desc">Сonsecteturadipiscing elit</p>
+            </div>
+            <div class="step">
+              <div class="step__circle">
+                <svg class="step__icon">
+                  <use xlink:href="/images/icons.svg#file"></use>
+                </svg>
+              </div>
+              <p class="step__desc">Sed do eiusmod tempor</p>
+            </div>
+            <div class="step">
+              <div class="step__circle">
+                <svg class="step__icon">
+                  <use xlink:href="/images/icons.svg#message"></use>
+                </svg>
+              </div>
+              <p class="step__desc">Esse cillum dolore eu fugiat</p>
+            </div>
+            <div class="step">
+              <div class="step__circle">
+                <svg class="step__icon">
+                  <use xlink:href="/images/icons.svg#money"></use>
+                </svg>
+              </div>
+              <p class="step__desc">Excepteur sint occaecat cupidatat non proident</p>
+            </div>
+          </div>
+
+          <form class="form">
+            <div class="form__items">
+              <div class="form__item">
+                <div class="custom-select" data-select>
+                  <button
+                    type="button"
+                    class="custom-select__trigger"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                    aria-labelledby="select-label"
+                    id="select-button"
+                  >
+                    <span id="select-label">Выберите тип системы</span>
+                    <svg class="custom-select__arrow">
+                      <use xlink:href="/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </button>
+
+                  <ul
+                    class="custom-select__options"
+                    role="listbox"
+                    tabindex="-1"
+                    aria-labelledby="select-button"
+                    id="select-list"
+                    hidden
+                  >
+                    <li role="option" tabindex="-1" data-value="1">Sed ut perspiciatis</li>
+                    <li role="option" tabindex="-1" data-value="2">Nemo enim ipsam</li>
+                    <li role="option" tabindex="-1" data-value="3">Et harum quidem</li>
+                    <li role="option" tabindex="-1" data-value="4">Sed ut perspiciatis 4</li>
+                    <li role="option" tabindex="-1" data-value="5">Nemo enim ipsam 5</li>
+                    <li role="option" tabindex="-1" data-value="6">Et harum quidem 6</li>
+                  </ul>
+
+                  <select name="type" class="custom-select__native" aria-hidden="true" tabindex="-1">
+                    <option selected hidden>Выберите тип системы</option>
+                    <option value="1">Sed ut perspiciatis</option>
+                    <option value="2">Nemo enim ipsam</option>
+                    <option value="3">Et harum quidem</option>
+                    <option value="4">Sed ut perspiciatis 4</option>
+                    <option value="5">Nemo enim ipsam 5</option>
+                    <option value="6">Et harum quidem 6</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__item">
+                <input type="email" placeholder="Ваш e-mail" name="email" class="form-control" />
+              </div>
+              <div class="form__item">
+                <input type="text" placeholder="Ваше имя" name="name" class="form-control" />
+              </div>
+              <div class="form__item form__item--col2">
+                <div class="progress-control">
+                  <div class="progress-control__header">
+                    <span class="progress-control__label">Sed ut perspiciatis, unde omnis iste natus</span>
+
+                    <span class="progress-control__value" id="progress-value">75%</span>
+                  </div>
+
+                  <input
+                    class="progress-control__input"
+                    type="range"
+                    id="progress-range"
+                    min="0"
+                    max="100"
+                    value="75"
+                    aria-label="Выбор процента"
+                  />
+                </div>
+              </div>
+              <div class="form__item">
+                <button type="button" class="btn btn--md btn--full-width btn--secondary" id="upload-btn">
+                  <span class="btn__inner">
+                    <svg class="btn__icon">
+                      <use xlink:href="/images/icons.svg#attach"></use>
+                    </svg>
+                    Прикрепить файл
+                  </span>
+                </button>
+                <input type="file" id="file-input" hidden />
+              </div>
+            </div>
+            <div class="form__button">
+              <button type="submit" class="btn btn--md btn--full-width">Отправить</button>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
 
@@ -99,7 +251,7 @@
             </a>
           </li>
           <li>
-            <a href="vk.com/ipsum" target="_blank" rel="noopener noreferrer" class="contact">
+            <a href="https://vk.com/ipsum" target="_blank" rel="noopener noreferrer" class="contact">
               <span class="contact__icon">
                 <svg class="icon">
                   <use xlink:href="/images/icons.svg#vk"></use>

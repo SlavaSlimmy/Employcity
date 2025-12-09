@@ -1,0 +1,70 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.btn {
+  font-size: rem(13);
+  line-height: rem(13);
+  font-weight: 400;
+  border-radius: 4px;
+  padding: 14px;
+  border: 1px solid var(--white);
+  background: var(--blue);
+  color: var(--white);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease;
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--md {
+    font-size: rem(15);
+    line-height: rem(24);
+    padding: 11px 16px;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: var(--primary-color);
+    border-color: var(--white);
+    color: var(--white);
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--blue-1);
+    border-color: var(--white);
+    color: var(--white);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    background-color: var(--blue);
+    border-color: var(--white);
+    color: var(--white);
+    cursor: not-allowed;
+  }
+
+  &--secondary {
+    background-color: var(--white);
+    border-color: var(--gray-4);
+    color: var(--gray-3);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__icon {
+    height: 20px;
+    width: 18px;
+  }
+}

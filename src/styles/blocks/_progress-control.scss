@@ -1,0 +1,57 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.progress-control {
+  width: 100%;
+  color: var(--white);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: rem(18);
+    line-height: rem(22);
+    margin-bottom: 4px;
+  }
+
+  &__value {
+    min-width: 50px;
+  }
+
+  &__input {
+    width: 100%;
+    appearance: none;
+    height: 6px;
+    background: color-mix(in srgb, var(--white) 70%, transparent);
+    border: 1px solid var(--white);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+
+    &::-webkit-slider-runnable-track,
+    &::-moz-range-track {
+      height: 6px;
+      background: color-mix(in srgb, var(--white) 70%, transparent);
+      border-radius: 3px;
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      background: var(--blue-2);
+      border-radius: 50%;
+      border: 3px solid var(--blue-1);
+    }
+
+    &::-moz-range-thumb {
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      background: var(--blue-2);
+      border-radius: 50%;
+      border: 3px solid var(--blue-1);
+    }
+  }
+}
