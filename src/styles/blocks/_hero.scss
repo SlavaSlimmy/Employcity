@@ -1,0 +1,15 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.hero {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    max-width: var(--max-container);
+    margin: 0 auto;
+    min-height: 850px;
+    padding: 0px 16px;
+  }
+}

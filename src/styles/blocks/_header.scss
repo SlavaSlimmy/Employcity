@@ -1,0 +1,42 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.header {
+  position: fixed;
+  padding: 20px 0px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--gray) 90%, transparent);
+
+  @media (min-width: $breakpoint-lg) {
+    padding: 33.5px 0px 31.5px;
+  }
+
+  &__container {
+    max-width: var(--max-container);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 16px;
+  }
+
+  &__logo {
+    display: block;
+    width: 200px;
+    height: 35px;
+
+    @media (min-width: $breakpoint-lg) {
+      width: 247px;
+      height: 35px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

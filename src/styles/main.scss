@@ -1,2 +1,8 @@
 @use './base/common';
+@use './blocks/header';
+@use './blocks/menu-toggle';
+@use './blocks/nav';
+@use './blocks/hero';
+@use './blocks/payment-view';
+@use './blocks/contact';
 @use './blocks/footer';

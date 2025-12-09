@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
@@ -8,20 +8,108 @@
     <title>Employcity</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,600;0,700;0,900;1,100;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,600;0,700;0,900;1,100;1,300;1,400;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- inject-critical-css -->
   </head>
   <body>
     <header class="header">
-      Header
+      <div class="header__container">
+        <a href="/" class="header__logo">
+          <img src="/images/logo.svg" alt="Логотип Employcity" />
+        </a>
+
+        <button
+          id="menu-toggle"
+          class="menu-toggle"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+          aria-label="Открыть меню"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="main-navigation" class="nav" aria-label="Main menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link nav__link--active">Бизнес</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Цены</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Оформить заказ</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="main">
-      main
+      <section class="hero" style="background-image: url('/images/hero.png')">
+        <div class="hero__container">hero</div>
+      </section>
     </main>
 
     <footer class="footer">
-      footer
+      <div class="footer__container">
+        <div class="footer__block footer__block--copyright">© 2018 «LoremIpsum.net» Все права защищены.</div>
+        <div class="footer__divider"></div>
+        <ul class="footer__block footer__block--payments">
+          <li>
+            <span class="payment-view">
+              <span class="payment-view__icon">
+                <svg class="icon">
+                  <use xlink:href="/images/icons.svg#qiwi"></use>
+                </svg>
+              </span>
+              Qiwi wallet
+            </span>
+          </li>
+          <li>
+            <span class="payment-view">
+              <span class="payment-view__icon">
+                <svg class="icon">
+                  <use xlink:href="/images/icons.svg#yandex"></use>
+                </svg>
+              </span>
+              Yandex Money
+            </span>
+          </li>
+          <li>
+            <span class="payment-view">
+              <span class="payment-view__icon">
+                <svg class="icon">
+                  <use xlink:href="/images/icons.svg#webmoney"></use>
+                </svg>
+              </span>
+              Web Money
+            </span>
+          </li>
+        </ul>
+        <div class="footer__divider"></div>
+        <ul class="footer__block footer__block--contacts contacts">
+          <li>
+            <a href="mailto:info@ipsum228.com" class="contact">
+              <span class="contact__icon">
+                <svg class="icon">
+                  <use xlink:href="/images/icons.svg#email"></use>
+                </svg>
+              </span>
+              <span class="contact__text">info@ipsum228.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="vk.com/ipsum" target="_blank" rel="noopener noreferrer" class="contact">
+              <span class="contact__icon">
+                <svg class="icon">
+                  <use xlink:href="/images/icons.svg#vk"></use>
+                </svg>
+              </span>
+              <span class="contact__text">Мы вконтакте</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
 
     <script type="module" src="/src/js/main.js"></script>

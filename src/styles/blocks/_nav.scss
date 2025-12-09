@@ -1,0 +1,66 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.nav {
+  position: fixed;
+  z-index: 1001;
+  background: color-mix(in srgb, var(--gray) 90%, transparent);
+  top: 75px;
+  width: 100%;
+  bottom: 0;
+  transform: translateX(100%);
+  visibility: hidden;
+  overflow-y: auto;
+
+  &--ready {
+    transition: transform 0.3s;
+    visibility: visible;
+  }
+
+  &--open {
+    transform: translateX(-16px);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    position: static;
+    display: block;
+    visibility: visible;
+    transform: translateX(0px);
+    background: none;
+    width: auto;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (min-width: $breakpoint-lg) {
+      flex-direction: row;
+      gap: 60px;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 600;
+    font-size: rem(13);
+    line-height: rem(16);
+    padding: 0px 16px;
+
+    @media (min-width: $breakpoint-lg) {
+      padding: 0;
+    }
+
+    &--active {
+      color: var(--primary-color);
+    }
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}

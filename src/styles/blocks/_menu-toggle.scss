@@ -1,0 +1,43 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.menu-toggle {
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  @media (min-width: $breakpoint-lg) {
+    display: none;
+  }
+
+  span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--white);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  &--active {
+    span {
+      &:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+      }
+    }
+  }
+}

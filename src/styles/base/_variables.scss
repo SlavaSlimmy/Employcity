@@ -4,20 +4,28 @@
   --default-font-family: 'Lato', sans-serif;
 
   --background-color: #272733;
-  --text-color: #FFFFFF;
-  --primary-color: #43ABF0;
+  --text-color: #ffffff;
+  --primary-color: #43abf0;
 
-  // --max-container: 1362px;
-  --max-container: 1386px;
+  // --max-container: 1172px;
+  --max-container: 1204px;
 
   // Pallete
   // Common
   --white: #ffffff;
   --black: #000000;
+
+  // Blue
+  --blue: #3e9cdc;
+
+  // Gray
+  --gray: #10101d;
+  --gray-1: #3d4050;
+  --gray-2: #c3c3c3;
 }
 
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
-$breakpoint-lg: 992px;
+$breakpoint-lg: 1024px;
 $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1400px;
