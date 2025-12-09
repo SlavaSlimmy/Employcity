@@ -1,0 +1,38 @@
+@use 'sass:math';
+
+//Percent
+@function percent($px, $from) {
+  $result: math.div($px, $from) * 100%;
+  @return $result;
+}
+
+//REM
+@function rem($px) {
+  @return math.div($px, 16) * 1rem;
+}
+
+@mixin line-clamp($max-lines-count) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $max-lines-count;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+@mixin noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin link {
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}

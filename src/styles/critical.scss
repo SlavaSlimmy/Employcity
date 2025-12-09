@@ -1,0 +1,23 @@
+@use './base/variables' as *;
+@use './base/normalize';
+@use './base/mixins' as *;
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--default-font-family);
+  font-size: var(--default-font-size);
+  line-height: rem(24);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+
+  @supports (height: 100dvh) {
+    min-height: 100dvh;
+  }
+}
