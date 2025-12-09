@@ -2,6 +2,13 @@
 @use './base/normalize';
 @use './base/mixins' as *;
 
+@use './base/common';
+@use './blocks/header';
+@use './blocks/menu-toggle';
+@use './blocks/nav';
+@use './blocks/btn';
+@use './blocks/hero';
+
 body {
   background: var(--background-color);
   color: var(--text-color);
