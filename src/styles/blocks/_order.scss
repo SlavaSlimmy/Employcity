@@ -39,6 +39,7 @@
     text-align: center;
     color: var(--gray-5);
     margin-bottom: 40px;
+    word-break: break-word;
 
     @media (min-width: $breakpoint-lg) {
       font-size: rem(18);
